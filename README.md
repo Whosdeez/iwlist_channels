@@ -1,5 +1,4 @@
-# iwlist_channels
-### A hasty CLI bash script to display the Wi-Fi activity around you
+# A hasty CLI bash script to display the Wi-Fi activity around you
 I made this bash script on an ADHD spree because I missed the Android [WiFi Analyzer](https://olgor.com) app on Linux.
 
 ### What the script does
