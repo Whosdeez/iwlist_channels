@@ -1,0 +1,13 @@
+# .bashrc
+# Wi-Fi analyzer
+function iwlist_channels() {
+    local iface
+    iface=$(iw dev | awk '$1=="Interface"{print $2}' | head -n 1)
+    
+    if [ -z "$iface" ]; then
+        echo "Error: No wireless interface found." >&2
+        return 1
+    fi
+    
+    sudo iw dev $iface scan | grep -E "primary channel|\* channel width|freq|[[:space:]]SSID:|signal|rates"
+}
